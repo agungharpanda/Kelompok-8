@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Perpustakaan Digital</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <main class="pembungkus-login">
+
+        <section class="identitas-login">
+            <b>Perpustakaan Digital</b> 
+            <p>Baca, belajar, berkembang</p>
+            <img src="../assets/icons/logo orang.png" alt="Logo Perpustakaan Digital">
+            <p>Akses ribuan buku digital</p>
+            <p>Baca kapan saja, dimana saja</p>
+        </section>
+
+        <form class="kartu-login" action="../index.html">
+
+            <h1>Login</h1>
+            <label for="username">Email atau Username</label>
+            <input type="text" name="username" id="username" placeholder="Masukkan email atau username">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Masukkan password">
+
+            <div class="opsi-login">
+                <label style="font-weight: normal; margin: 0;">
+                    <input type="checkbox" style="width: auto;">
+                    Ingat saya
+                </label>
+
+                <a href="lupa-password.html">Lupa password?</a>
+            </div>
+                <button type="submit">LOGIN</button>
+                <button class="tombol-google" type="button">
+                <img
+                    src="../assets/icons/google.png"
+                    alt=""
+                    style="width: 14px; vertical-align: middle; margin-right: 6px;"
+                >
+                Login dengan Google
+            </button>
+
+            <p class="catatan-daftar">
+                Belum punya akun?
+                <a href="daftar.html">Register</a>
+            </p>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

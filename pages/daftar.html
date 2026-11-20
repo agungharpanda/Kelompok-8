@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar - Perpustakaan Digital</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="halaman-auth">
+  <main class="pembungkus-auth">
+    <section class="identitas-auth">
+      <b>Perpustakaan Digital</b>
+      <p>Baca. Belajar. Berkembang.</p>
+      <img src="../assets/icons/logo orang.png" alt="Ilustrasi pengguna">
+      <p>Akses ribuan buku digital</p>
+      <p>Baca kapan saja, di mana saja</p>
+    </section>
+
+    <form class="kartu-auth" id="formDaftar">
+      <h1>Daftar</h1>
+      <p class="subjudul-auth">Buat akun untuk mulai membaca</p>
+
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" autocomplete="name">
+
+      <label for="email">Email atau Username</label>
+      <input type="text" id="email" name="email" placeholder="Masukkan email atau username" autocomplete="username">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Buat password" autocomplete="new-password" minlength="6">
+
+      <label for="konfirmasi">Konfirmasi Password</label>
+      <input type="password" id="konfirmasi" name="konfirmasi" placeholder="Masukkan ulang password" autocomplete="new-password" minlength="6">
+
+      <p class="catatan-auth">Dengan mendaftar, Anda menyetujui syarat dan ketentuan.</p>
+      <button type="submit">DAFTAR</button>
+      <button class="tombol-google-auth" type="button" onclick="alert('Fitur daftar dengan Google belum dihubungkan.')">
+        <img src="../assets/icons/google.png" alt=""> Daftar dengan Google
+      </button>
+      <p class="tautan-auth">Sudah punya akun? <a href="login.html">Login</a></p>
+      <p class="pesan-auth" id="pesanDaftar" role="status"></p>
+    </form>
+  </main>
+  <footer>@ Perpustakaan Digital SMKN 3 Banjar</footer>
+  <script>
+    document.getElementById('formDaftar').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const password = document.getElementById('password').value;
+      const konfirmasi = document.getElementById('konfirmasi').value;
+      const pesan = document.getElementById('pesanDaftar');
+      if (password !== konfirmasi) {
+        pesan.textContent = 'Konfirmasi password tidak sama. Periksa kembali password Anda.';
+        return;
+      }
+      alert('Pendaftaran berhasil pada demo. Silakan login.');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
